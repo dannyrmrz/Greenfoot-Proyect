@@ -14,6 +14,32 @@ public class MainFish extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        checkKeyPress();
+        checkCollision();
     }
+    private void checkKeyPress(){
+        if(Greenfoot.isKeyDown("up")){
+            setLocation(getX(),getY()-6);
+        }
+        if(Greenfoot.isKeyDown("down")){
+            setLocation(getX(),getY()+6);
+        }
+        if(Greenfoot.isKeyDown("left")){
+            setLocation(getX()-4,getY());
+        }
+        if(Greenfoot.isKeyDown("right")){
+            setLocation(getX()+4,getY());
+        }
+    }
+    private void checkCollision(){
+        if(isTouching(Fish1.class)){
+            removeTouching(Fish1.class);
+            MyWorld.score.add(2);
+        }
+        if(isTouching(Fish2.class)){
+            removeTouching(Fish2.class);
+            MyWorld.score.add(4);
+        }
+    }
+        
 }

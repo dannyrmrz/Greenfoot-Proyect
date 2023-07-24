@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fish2 extends Actor
 {
-    private int speed;
+    public int speed;
     public Fish2()
     {
         speed=Greenfoot.getRandomNumber(3)+1;
