@@ -1,19 +1,11 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class MyWorld extends World
 {
-    static Counter puntaje = new Counter("Puntaje: ");
-    static Counter vida = new Counter("Vida: ");
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
+    static Counter score = new Counter("Score : ");
+    static Counter hp = new Counter("Hp : ");
+    
     public MyWorld()
     {    
         super(950, 550, 1); 
@@ -30,7 +22,7 @@ public class MyWorld extends World
         if (Greenfoot.getRandomNumber(200)<3){
             addObject(new Predator1(),948, Greenfoot.getRandomNumber(360));
         }
-        if (MyWorld.puntaje.getValue(0)>=50)
+        if (MyWorld.score.getValue(0)>=50)
         {
          Greenfoot.delay(5);
          Greenfoot.setWorld(new Level2());
@@ -38,6 +30,11 @@ public class MyWorld extends World
     }
     private void prepare()
     {
+        addObject(score,80,45);
+        score.setValue(0);
+        addObject(hp,870,45);
+        hp.setValue(1);
+        
         MainFish mainFish = new MainFish();
         addObject(mainFish,86,281);
         Fish1 fish1 = new Fish1();
@@ -61,12 +58,6 @@ public class MyWorld extends World
         addObject(predator1,475,44);
         Predator1 predator12 = new Predator1();
         addObject(predator12,521,492);
-        
-        addObject(puntaje,80,45);
-        puntaje.setValue(0);
-        addObject(vida,870,45);
-        vida.setValue(1);
-        
     }
     
 }
