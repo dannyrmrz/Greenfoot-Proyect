@@ -3,8 +3,8 @@ import greenfoot.*;
 
 public class MyWorld extends World
 {
-    static Counter score = new Counter("Score : ");
-    static Counter hp = new Counter("Hp : ");
+    static Counter puntaje = new Counter("Puntaje : ");
+    static Counter vida = new Counter("Vida : ");
     
     public MyWorld()
     {    
@@ -22,7 +22,7 @@ public class MyWorld extends World
         if (Greenfoot.getRandomNumber(200)<3){
             addObject(new Predator1(),948, Greenfoot.getRandomNumber(360));
         }
-        if (MyWorld.score.getValue(0)>=50)
+        if (MyWorld.puntaje.getValue()>=50)
         {
          Greenfoot.delay(5);
          Greenfoot.setWorld(new Level2());
@@ -30,10 +30,10 @@ public class MyWorld extends World
     }
     private void prepare()
     {
-        addObject(score,80,45);
-        score.setValue(0);
-        addObject(hp,870,45);
-        hp.setValue(1);
+        addObject(puntaje,80,45);
+        puntaje.setValue(0);
+        addObject(vida, 870,45);
+        vida.setValue(1);
         
         MainFish mainFish = new MainFish();
         addObject(mainFish,86,281);
