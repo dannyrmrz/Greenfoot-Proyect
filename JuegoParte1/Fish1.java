@@ -22,7 +22,7 @@ public class Fish1 extends Actor
          setLocation(getX()-speed,getY());
          if (getX()==0)
          {
-             MyWorld.score.add(0);
+             MyWorld.puntaje.add(0);
              getWorld().removeObject(this);
          }
     }

@@ -9,9 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Counter extends Actor
 {
     private String nombre;
-    private int count = 0;
-    private int setValue=0;
-    private int getValue=0;
+    private int count;
+    private int setValue;
+    private int getValue;
     private int speed=0;
     
     /**

@@ -34,11 +34,11 @@ public class MainFish extends Actor
     private void checkCollision(){
         if(isTouching(Fish1.class)){
             removeTouching(Fish1.class);
-            MyWorld.score.add(2);
+            MyWorld.puntaje.add(2);
         }
         if(isTouching(Fish2.class)){
             removeTouching(Fish2.class);
-            MyWorld.score.add(4);
+            MyWorld.puntaje.add(4);
         }
     }
         
