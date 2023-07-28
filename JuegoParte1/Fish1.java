@@ -17,6 +17,7 @@ public class Fish1 extends Actor
          if (getX()==0)
          {
              MyWorld.puntaje.add(0);
+             Level2.puntaje.add(-2);
              getWorld().removeObject(this);
          }
     }

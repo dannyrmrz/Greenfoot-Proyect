@@ -26,10 +26,16 @@ public class MainFish extends Actor
         if(isTouching(Fish1.class)){
             removeTouching(Fish1.class);
             MyWorld.puntaje.add(2);
+            Level2.puntaje.add(3);
         }
         if(isTouching(Fish2.class)){
             removeTouching(Fish2.class);
             MyWorld.puntaje.add(4);
+            Level2.puntaje.add(5);
+        }
+        if(isTouching(Fish3.class)){
+            removeTouching(Fish3.class);
+            Level2.puntaje.add(6); 
         }
     }
         
