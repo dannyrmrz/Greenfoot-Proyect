@@ -9,16 +9,16 @@ public class MainFish extends Actor
         checkCollision();
     }
     private void checkKeyPress(){
-        if(Greenfoot.isKeyDown("up")){
+        if( ( Greenfoot.isKeyDown("w") ) || (Greenfoot.isKeyDown("up") )  ){
             setLocation(getX(),getY()-6);
         }
-        if(Greenfoot.isKeyDown("down")){
+        if( (Greenfoot.isKeyDown("s")) || ( Greenfoot.isKeyDown("down") )  ){
             setLocation(getX(),getY()+6);
         }
-        if(Greenfoot.isKeyDown("left")){
+        if( (Greenfoot.isKeyDown("a") ) || (Greenfoot.isKeyDown("left") )  ){
             setLocation(getX()-4,getY());
         }
-        if(Greenfoot.isKeyDown("right")){
+        if( ( Greenfoot.isKeyDown("d")) || (Greenfoot.isKeyDown("right") )  ){
             setLocation(getX()+4,getY());
         }
     }
