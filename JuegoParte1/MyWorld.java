@@ -33,7 +33,7 @@ public class MyWorld extends World
         addObject(puntaje,80,45);
         puntaje.setValue(0);
         addObject(vida, 870,45);
-        vida.setValue(1);
+        vida.setValue(3);
         
         MainFish mainFish = new MainFish();
         addObject(mainFish,86,281);

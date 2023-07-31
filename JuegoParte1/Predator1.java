@@ -6,10 +6,23 @@ public class Predator1 extends Actor
     {
         setLocation(getX()-4,getY());
         if(isTouching(MainFish.class)){
-            removeTouching(MainFish.class);
-            Greenfoot.setWorld(new OverPage());
+            MyWorld.vida.add(-1);
+            removeTouching(Predator1.class);
+            if (MyWorld.vida.getValue()==0)
+            {
+                Greenfoot.setWorld(new OverPage());
+            }
+        }
+        if(isTouching(MainFish.class)){
+            Level2.vida.add(-1);
+            removeTouching(Predator1.class);
+            if (Level2.vida.getValue()==0||Level2.vida.getValue() < 0)
+            {
+                Greenfoot.setWorld(new OverPage());
+            }
         }
         if(getX()<5)
         getWorld().removeObject(this);
     }
 }
+

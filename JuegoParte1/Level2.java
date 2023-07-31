@@ -1,11 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Level2 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Level2 extends World
 {
     static Counter puntaje = new Counter("Puntaje : ");
@@ -26,10 +20,10 @@ public class Level2 extends World
         if(Greenfoot.getRandomNumber(120)<3){
             addObject(new Fish3(),948, Greenfoot.getRandomNumber(360));
         }
-        if(Greenfoot.getRandomNumber(150)<3){
+        if(Greenfoot.getRandomNumber(300)<3){
             addObject(new Predator1(),948, Greenfoot.getRandomNumber(360));
         }
-        if(Greenfoot.getRandomNumber(250)<3){
+        if(Greenfoot.getRandomNumber(300)<3){
             addObject(new Predator2(),948, Greenfoot.getRandomNumber(360));
         }
     }    
@@ -73,6 +67,6 @@ public class Level2 extends World
         addObject(puntaje,80,45);
         puntaje.setValue(0);
         addObject(vida, 870,45);
-        vida.setValue(1);
+        vida.setValue(3);
     }
 }
