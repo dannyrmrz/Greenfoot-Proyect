@@ -27,15 +27,18 @@ public class MainFish extends Actor
         if(isTouching(Fish1.class)){
             removeTouching(Fish1.class);
             MyWorld.puntaje.add(2);
+            Greenfoot.playSound("bite1.wav");
             Level2.puntaje.add(3);
         }
         if(isTouching(Fish2.class)){
             removeTouching(Fish2.class);
             MyWorld.puntaje.add(4);
+            Greenfoot.playSound("bite2.wav");
             Level2.puntaje.add(5);
         }
         if(isTouching(Fish3.class)){
             removeTouching(Fish3.class);
+            Greenfoot.playSound("bite3.wav");
             Level2.puntaje.add(6); 
         }
         if (isTouching(Predator1.class))

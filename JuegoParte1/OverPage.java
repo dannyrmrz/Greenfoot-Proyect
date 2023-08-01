@@ -21,6 +21,6 @@ public class OverPage extends World
         exit.setLocation(334,393);
         showText("Haz sido comido por el depredador   :(", 475, 280);
         showText("TU PUNTAJE FUE: "+MyWorld.puntaje.getValue()+" puntos", 475, 305);
-        //Greenfoot.playSound("");
+        Greenfoot.playSound("gameOver.wav");
     }
 }

@@ -68,5 +68,7 @@ public class Level2 extends World
         puntaje.setValue(0);
         addObject(vida, 870,45);
         vida.setValue(3);
+        
+        Greenfoot.playSound("water.wav");
     }
 }

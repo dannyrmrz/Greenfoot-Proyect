@@ -58,6 +58,8 @@ public class MyWorld extends World
         addObject(predator1,475,44);
         Predator1 predator12 = new Predator1();
         addObject(predator12,521,492);
+        
+        Greenfoot.playSound("water.wav");
     }
     
 }

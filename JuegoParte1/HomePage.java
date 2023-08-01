@@ -16,6 +16,6 @@ public class HomePage extends World
     private void prepare(){
         Play play = new Play();
         addObject(play, 475, 397);
-        //Greenfoot.playSound("water");
+        Greenfoot.playSound("water.wav");
     }
 }
